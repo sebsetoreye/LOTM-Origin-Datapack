@@ -9,50 +9,131 @@
             "actions": [
                 {
                     "condition": {
-                        "type": "origins:resource",
-                        "resource": "lotm:pathways/lord_of_mysteries/door/modes/mode",
-                        "comparison": "==",
-                        "compare_to": 1
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "inverted": true,
+                                "type": "origins:sneaking"
+                            },
+                            {
+                                "type": "origins:resource",
+                                "resource": "lotm:pathways/lord_of_mysteries/door/modes/mode",
+                                "comparison": "==",
+                                "compare_to": 1
+                            }
+                        ]
                     },
                     "action": {
-                        "type": "origins:modify_resource",
+                        "type": "origins:set_resource",
                         "resource": "lotm:pathways/lord_of_mysteries/door/modes/mode",
-                        "modifier": {
-                            "operation": "set_total",
-                            "value": 2
-                        }
+                        "value": 2
                     }
                 },
                 {
                     "condition": {
-                        "type": "origins:resource",
-                        "resource": "lotm:pathways/lord_of_mysteries/door/modes/mode",
-                        "comparison": "==",
-                        "compare_to": 2
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "inverted": true,
+                                "type": "origins:sneaking"
+                            },
+                            {
+                                "type": "origins:resource",
+                                "resource": "lotm:pathways/lord_of_mysteries/door/modes/mode",
+                                "comparison": "==",
+                                "compare_to": 2
+                            }
+                        ]
                     },
                     "action": {
-                        "type": "origins:modify_resource",
+                        "type": "origins:set_resource",
                         "resource": "lotm:pathways/lord_of_mysteries/door/modes/mode",
-                        "modifier": {
-                            "operation": "set_total",
-                            "value": 3
-                        }
+                        "value": 3
                     }
-                }, 
-                {              
+                },
+                {
                     "condition": {
-                        "type": "origins:resource",
-                        "resource": "lotm:pathways/lord_of_mysteries/door/modes/mode",
-                        "comparison": "==",
-                        "compare_to": 3
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "inverted": true,
+                                "type": "origins:sneaking"
+                            },
+                            {
+                                "type": "origins:resource",
+                                "resource": "lotm:pathways/lord_of_mysteries/door/modes/mode",
+                                "comparison": "==",
+                                "compare_to": 3
+                            }
+                        ]
                     },
                     "action": {
-                        "type": "origins:modify_resource",
+                        "type": "origins:set_resource",
                         "resource": "lotm:pathways/lord_of_mysteries/door/modes/mode",
-                        "modifier": {
-                            "operation": "set_total",
-                            "value": 1
-                        }
+                        "value": 1
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:sneaking"
+                            },
+                            {
+                                "type": "origins:resource",
+                                "resource": "lotm:pathways/lord_of_mysteries/door/modes/mode",
+                                "comparison": "==",
+                                "compare_to": 1
+                            }
+                        ]
+                    },
+                    "action": {
+                        "type": "origins:set_resource",
+                        "resource": "lotm:pathways/lord_of_mysteries/door/modes/mode",
+                        "value": 3
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:sneaking"
+                            },
+                            {
+                                "type": "origins:resource",
+                                "resource": "lotm:pathways/lord_of_mysteries/door/modes/mode",
+                                "comparison": "==",
+                                "compare_to": 2
+                            }
+                        ]
+                    },
+                    "action": {
+                        "type": "origins:set_resource",
+                        "resource": "lotm:pathways/lord_of_mysteries/door/modes/mode",
+                        "value": 1
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:sneaking"
+                            },
+                            {
+                                "type": "origins:resource",
+                                "resource": "lotm:pathways/lord_of_mysteries/door/modes/mode",
+                                "comparison": "==",
+                                "compare_to": 3
+                            }
+                        ]
+                    },
+                    "action": {
+                        "type": "origins:set_resource",
+                        "resource": "lotm:pathways/lord_of_mysteries/door/modes/mode",
+                        "value": 2
                     }
                 }
             ]
