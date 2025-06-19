@@ -1,0 +1,14 @@
+{
+    "name": "Trickmaster spirituality regen ",
+    "description": "As a Sequence 8: Trickmaster, you regenerate Spirituality slightly faster than an Apprentice",
+    "type": "origins:action_over_time",
+    "interval": 20,
+    "entity_action": {
+        "type": "origins:modify_resource",
+        "resource": "lotm:pathways/lord_of_mysteries/door/8_trickmaster/spirituality/spirituality",
+        "modifier": {
+            "operation": "addition",
+            "value": 1.5
+        }
+    }
+}

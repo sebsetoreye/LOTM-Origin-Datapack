@@ -1,0 +1,64 @@
+{
+    "name": "Debuffs for seeing MCF",
+    "hidden": true,
+    "type": "origins:multiple",
+    "remove": {
+        "type": "origins:action_over_time",
+        "interval": 200,
+        "entity_action": {
+            "type": "origins:revoke_power",
+            "power": "lotm:global/view-mcf/debuff",
+            "source": "lotm"
+        }
+    },
+    "extra-damage": {
+        "type": "origins:modify_damage_taken",
+        "modifier": {
+            "operation": "addition",
+            "value": 5
+        }
+    },
+    "debuffs": {
+        "type": "origins:attribute",
+        "modifiers": [
+            {
+                "attribute": "minecraft:generic.armor_toughness",
+                "operation": "addition",
+                "value": -6
+            },
+            {
+                "attribute": "minecraft:generic.armor",
+                "operation": "addition",
+                "value": -6
+            },
+            {
+                "attribute": "minecraft:generic.max_health",
+                "operation": "addition",
+                "value": -2
+            },
+            {
+                "attribute": "minecraft:generic.movement_speed",
+                "operation": "multiply_total",
+                "value": -0.7
+            },
+            {
+                "attribute": "minecraft:generic.attack_damage",
+                "operation": "addition",
+                "value": -1
+            }
+        ],
+        "update_health": true
+    },
+    "add-madness": {
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:modify_resource",
+            "resource": "lotm:global/madness/madness",
+            "modifier": {
+                "operation": "addition",
+                "value": 3
+            }
+        }
+    }
+}

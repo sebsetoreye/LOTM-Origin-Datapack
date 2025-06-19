@@ -1,0 +1,19 @@
+{
+  "type": "main:spirit_world_type",
+  "generator": {
+    "type": "minecraft:flat",
+    "settings": {
+      "biome": "minecraft:the_void",
+      "layers": [
+        {
+          "height": 64,
+          "block": "minecraft:air"
+        },
+        {
+          "height": 1,
+          "block": "minecraft:end_stone"
+        }
+      ]
+    }
+  }
+}

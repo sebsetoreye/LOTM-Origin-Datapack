@@ -1,0 +1,15 @@
+{
+    "name": "Beyonder Human",
+    "description": "You contain the ability to become a Beyonder, however you are still a normal human",
+
+    "powers": [
+
+        "lotm:pathways/none/beyonder_human/spirituality/human-spirituality",
+        "lotm:pathways/none/beyonder_human/spirituality/human-spirituality-regen",
+
+        "lotm:pathways/none/beyonder_human/upgrade-sequence/lord_of_mysteries/apprentice"
+    ],
+    "icon": "minecraft:end_crystal",
+    "impact": 3,
+    "order": 10
+}

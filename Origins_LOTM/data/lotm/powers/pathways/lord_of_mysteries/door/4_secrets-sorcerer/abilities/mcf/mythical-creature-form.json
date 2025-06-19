@@ -1,0 +1,109 @@
+{
+    "name": "Incomplete Mythical Creature Form",
+    "description": "A Mythical Creature Form is not something that could be described superficially or in three-dimensions, as apart from quantitative terms like length, width, height, they're also a potpourri of complex knowledge, godhood characteristics, and secret symbols. Ordinary people and Beyonders below Sequence 4 will suffer tremendous damage from a simply glance at a Mythical Creature, without any godhood they will be corrupted by the spirituality, having their minds thrashed.",
+    "hidden": true,
+    "type": "origins:multiple",
+    "toggle": {
+        "type": "origins:toggle",
+        "active_by_default": false,
+        "key": {
+            "key": "key.origins.nonary_active"
+        },
+        "retain_state": true
+    },
+    "player-change": {
+        "condition": {
+            "type": "origins:power_active",
+            "power": "*:*_toggle"
+        },
+        "type": "origins:model_color",
+        "red": 0,
+        "alpha": 0.8
+    },
+    "create-madness": {
+        "condition": {
+            "type": "origins:power_active",
+            "power": "*:*_toggle"
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:modify_resource",
+            "resource": "lotm:global/madness/madness",
+            "modifier": {
+                "operation": "addition",
+                "value": 4
+            }
+        }
+    },
+    "adding-mcf": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:power_active",
+                    "power": "*:*_toggle"
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 30,
+        "entity_action": {
+            "type": "origins:grant_power",
+            "power": "lotm:global/mc/mcf",
+            "source": "lotm"
+        }
+    },
+    "increas-spirituality-regen": {
+        "condition": {
+            "type": "origins:power_active",
+            "power": "*:*_toggle"
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:modify_resource",
+            "resource": "lotm:pathways/lord_of_mysteries/door/4_secrets-sorcerer/spirituality/spirituality",
+            "modifier": {
+                "operation": "addition",
+                "value": 10
+            }
+        }
+    },
+    "stat-increase": {
+        "condition": {
+            "type": "origins:power_active",
+            "power": "*:*_toggle"
+        },
+        "type": "origins:conditioned_attribute",
+        "modifiers": [
+            {
+                "attribute": "minecraft:generic.movement_speed",
+                "operation": "multiply_base",
+                "value": 1.5
+            },
+            {
+                "attribute": "minecraft:generic.armor",
+                "operation": "addition",
+                "value": 6
+            },
+            {
+                "attribute": "minecraft:generic.armor_toughness",
+                "operation": "addition",
+                "value": 6
+            },
+            {
+                "attribute": "minecraft:generic.max_health",
+                "operation": "addition",
+                "value": 4
+            },
+            {
+                "attribute": "generic.attack_damage",
+                "operation": "addition",
+                "value": 4
+            }
+        ],
+        "tick_rate": 20,
+        "update_health": true
+    }
+}

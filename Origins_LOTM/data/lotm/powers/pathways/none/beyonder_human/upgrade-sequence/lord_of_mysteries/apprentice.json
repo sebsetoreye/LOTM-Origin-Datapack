@@ -1,0 +1,44 @@
+{
+    "name": "Sequence Upgrade",
+    "hidden": true,
+    "type": "origins:action_on_item_use",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "origin set @s origins:origin lotm:pathways/lord_of_mysteries/door/9_apprentice"
+            },
+            {
+                "type": "origins:apply_effect",
+                "effects": [
+                    {
+                        "effect": "minecraft:slowness",
+                        "duration": 200,
+                        "amplifier": 3,
+                        "show_particles": false,
+                        "show_icon": false
+                    },
+                    {
+                        "effect": "minecraft:nausea",
+                        "duration": 200,
+                        "amplifier": 3,
+                        "show_particles": false,
+                        "show_icon": false
+                    }
+                ]
+            }
+        ]
+    },
+    "item_condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:nbt",
+                "nbt": "{display:{Name:'{\"text\":\"Apprentice Sequence: 9\",\"color\":\"blue\",\"underlined\":true}'},CustomModelData:1,Potion:\"minecraft:awkward\",CustomPotionColor:10622975}"
+            }
+        ]
+    },
+    "trigger": "finish",
+    "priority": 0
+}

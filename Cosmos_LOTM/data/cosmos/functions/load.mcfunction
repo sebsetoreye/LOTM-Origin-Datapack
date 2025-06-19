@@ -1,0 +1,1 @@
+tellraw @a {"text":"Loaded LOTM Cosmos Extras","color":"yellow","bold":true}

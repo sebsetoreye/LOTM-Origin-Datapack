@@ -1,0 +1,73 @@
+{
+    "name": "Cognition",
+    "description": "Goes into Cognition, to lower your madness.",
+    "hidden": true,
+    "type": "origins:multiple",
+    "stop-player": {
+        "condition": {
+            "type": "origins:power_active",
+            "power": "*:*_toggle"
+        },
+        "type": "origins:conditioned_attribute",
+        "modifiers": [
+            {
+                "attribute": "minecraft:generic.movement_speed",
+                "operation": "addition",
+                "value": -10
+            }
+        ],
+        "tick_rate": 20,
+        "update_health": true
+    },
+    "lower-madness": {
+        "condition": {
+            "type": "origins:power_active",
+            "power": "*:*_toggle"
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:modify_resource",
+            "resource": "lotm:global/madness/madness",
+            "modifier": {
+                "operation": "addition",
+                "value": -3
+            }
+        }
+    },
+    "partical-blindness-sound": {
+        "condition": {
+            "type": "origins:power_active",
+            "power": "*:*_toggle"
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "/particle minecraft:wax_on ~ ~ ~ 0 1 0 10 10"
+                },
+                {
+                    "type": "origins:apply_effect",
+                    "effect": {
+                        "effect": "minecraft:blindness",
+                        "duration": 40,
+                        "amplifier": 0,
+                        "show_particles": false,
+                        "show_icon": false
+                    }
+                }
+            ]
+        }
+    },
+    "toggle": {
+        "type": "origins:toggle",
+        "active_by_default": false,
+        "key": {
+            "key": "key.origins.octonary_active"
+        },
+        "retain_state": false
+    }
+}

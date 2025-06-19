@@ -1,0 +1,14 @@
+{
+    "name": "Human spirituality regen ",
+    "description": "As a normal human, you regenerate Spirituality but at a very slow speed.",
+    "type": "origins:action_over_time",
+    "interval": 20,
+    "entity_action": {
+        "type": "origins:modify_resource",
+        "resource": "lotm:pathways/none/beyonder_human/spirituality/human-spirituality",
+        "modifier": {
+            "operation": "addition",
+            "value": 1
+        }
+    }
+}

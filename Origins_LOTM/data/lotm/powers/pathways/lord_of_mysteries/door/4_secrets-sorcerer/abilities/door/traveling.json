@@ -1,0 +1,159 @@
+{
+    "name": "Traveling",
+    "description": "Consumes 6.5 Spirituality per second to open a Door to the Spirit World and Travel there.This gives a form of long distance Teleportation.",
+    "hidden": true,
+    "type": "origins:multiple",
+    "spirit-world-travel": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "lotm:pathways/lord_of_mysteries/door/4_secrets-sorcerer/abilities/door/travel/check",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:dimension",
+                    "dimension": "minecraft:overworld"
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "lotm:pathways/lord_of_mysteries/door/modes/mode",
+                    "comparison": "==",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "/execute in main:spirit_world run tp @s ~ 1 ~"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "/tp @e[tag=spirit-tag] @s"
+                }
+            ]
+        },
+        "cooldown": 0,
+        "key": {
+            "key": "key.origins.ternary_active"
+        }
+    },
+    "use-spirituality": {
+        "condition": {
+            "type": "origins:dimension",
+            "dimension": "main:spirit_world"
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:modify_resource",
+            "resource": "lotm:pathways/lord_of_mysteries/door/4_secrets-sorcerer/spirituality/spirituality",
+            "modifier": {
+                "operation": "addition",
+                "value": -6.5
+            }
+        }
+    },
+    "player-change": {
+        "condition": {
+            "type": "origins:dimension",
+            "dimension": "main:spirit_world"
+        },
+        "type": "origins:model_color",
+        "alpha": 0.7
+    },
+    "home": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:dimension",
+                    "dimension": "main:spirit_world"
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "lotm:pathways/lord_of_mysteries/door/4_secrets-sorcerer/abilities/door/travel/check",
+                    "comparison": "==",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "lotm:pathways/lord_of_mysteries/door/modes/mode",
+                    "comparison": "==",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "/execute in minecraft:overworld run tp @s ~ 70 ~"
+                },
+                {
+                    "type": "origins:apply_effect",
+                    "effect": {
+                        "effect": "minecraft:slow_falling",
+                        "duration": 200,
+                        "amplifier": 1,
+                        "show_particles": false,
+                        "show_icon": false
+                    }
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "/tp @e[tag=spirit-tag] @s"
+                }
+            ]
+        },
+        "cooldown": 0,
+        "key": {
+            "key": "key.origins.ternary_active"
+        }
+    },
+    "check": {
+        "condition": {
+            "type": "origins:dimension",
+            "dimension": "main:spirit_world"
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:set_resource",
+            "resource": "lotm:pathways/lord_of_mysteries/door/4_secrets-sorcerer/abilities/door/travel/check",
+            "value": 1
+        }
+    },
+    "remove-check": {
+        "condition": {
+            "type": "origins:dimension",
+            "dimension": "minecraft:overworld"
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:set_resource",
+            "resource": "lotm:pathways/lord_of_mysteries/door/4_secrets-sorcerer/abilities/door/travel/check",
+            "value": 0
+        }
+    },
+    "bring-others": {
+        "condition": {
+            "type": "origins:sneaking"
+        },
+        "type": "origins:target_action_on_hit",
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "/tag @s add spirit-tag"
+        },
+        "cooldown": 1
+    }
+}

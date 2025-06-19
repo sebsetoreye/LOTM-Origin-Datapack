@@ -1,0 +1,49 @@
+{
+    "name": "Cosmos",
+    "hidden": true,
+    "type": "origins:multiple",
+    "fly": {
+        "condition": {
+            "type": "origins:dimension",
+            "dimension": "main:cosmos"
+        },
+        "type": "origins:creative_flight"
+    },
+    "slow-fall": {
+        "condition": {
+            "type": "origins:dimension",
+            "dimension": "main:cosmos"
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "effect": "minecraft:slow_falling",
+                "duration": 100,
+                "amplifier": 1,
+                "is_ambient": true,
+                "show_particles": false,
+                "show_icon": false
+            }
+        }
+    },
+    "restrictions": {
+        "condition": {
+            "inverted": true,
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "inverted": true,
+                    "type": "origins:power_active",
+                    "power": "lotm:global/cosmos/angle"
+                },
+                {
+                    "type": "origins:dimension",
+                    "dimension": "main:cosmos"
+                }
+            ]
+        },
+        "type": "origins:simple"
+    }
+}

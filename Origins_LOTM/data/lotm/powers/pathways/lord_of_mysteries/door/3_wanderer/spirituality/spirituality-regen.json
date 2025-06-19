@@ -1,0 +1,14 @@
+{
+    "name": "Wanderer spirituality regen ",
+    "description": "As a Sequence 3: Wanderer, you regenerate Spirituality much faster than a Secrets Sorcerer.",
+    "type": "origins:action_over_time",
+    "interval": 20,
+    "entity_action": {
+        "type": "origins:modify_resource",
+        "resource": "lotm:pathways/lord_of_mysteries/door/3_wanderer/spirituality/spirituality",
+        "modifier": {
+            "operation": "addition",
+            "value": 15
+        }
+    }
+}

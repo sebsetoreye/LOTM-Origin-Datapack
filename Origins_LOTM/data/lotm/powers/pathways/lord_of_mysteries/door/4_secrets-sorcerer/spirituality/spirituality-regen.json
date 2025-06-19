@@ -1,0 +1,14 @@
+{
+    "name": "Secrets Sorcerer spirituality regen ",
+    "description": "As a Sequence 4: Secrets Sorcerer, you regenerate Spirituality much faster than a Traveler.",
+    "type": "origins:action_over_time",
+    "interval": 20,
+    "entity_action": {
+        "type": "origins:modify_resource",
+        "resource": "lotm:pathways/lord_of_mysteries/door/4_secrets-sorcerer/spirituality/spirituality",
+        "modifier": {
+            "operation": "addition",
+            "value": 10
+        }
+    }
+}

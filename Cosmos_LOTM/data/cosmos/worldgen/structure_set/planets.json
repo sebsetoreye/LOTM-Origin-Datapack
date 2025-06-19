@@ -1,0 +1,27 @@
+{
+  "structures": [
+    {
+      "structure": "cosmos:elunara_planet",
+      "weight": 1
+    },
+    {
+      "structure": "cosmos:myrravelle_planet",
+      "weight": 1
+    },
+    {
+      "structure": "cosmos:vaerith_planet",
+      "weight": 1
+    },
+    {
+      "structure": "cosmos:zyndros_planet",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 53,
+    "separation": 20,
+    "spread_type": "linear",
+    "salt": 7
+  }
+}

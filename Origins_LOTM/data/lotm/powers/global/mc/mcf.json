@@ -1,0 +1,14 @@
+{
+    "name": "Removing MCF",
+    "hidden": true,
+    "type": "origins:multiple",
+    "remove": {
+        "type": "origins:action_over_time",
+        "interval": 40,
+        "entity_action": {
+            "type": "origins:revoke_power",
+            "power": "lotm:global/mc/mcf",
+            "source": "lotm"
+        }
+    }
+}

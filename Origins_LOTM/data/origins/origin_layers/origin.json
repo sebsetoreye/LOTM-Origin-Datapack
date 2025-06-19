@@ -1,0 +1,15 @@
+{
+    "replace": false,
+    "origins": [
+
+        "lotm:pathways/none/beyonder_human",
+
+        "lotm:pathways/lord_of_mysteries/door/9_apprentice",
+        "lotm:pathways/lord_of_mysteries/door/8_trickmaster",
+        "lotm:pathways/lord_of_mysteries/door/7_astrologer",
+        "lotm:pathways/lord_of_mysteries/door/5_traveler",
+        "lotm:pathways/lord_of_mysteries/door/4_secrets-sorcerer",
+        "lotm:pathways/lord_of_mysteries/door/3_wanderer"
+        
+    ]
+}

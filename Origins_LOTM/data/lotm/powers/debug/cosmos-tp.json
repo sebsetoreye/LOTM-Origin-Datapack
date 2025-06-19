@@ -1,0 +1,68 @@
+{
+    "name": "LOTM Debug to Cosmos",
+    "description": "use primary Key to go to Cosmos, sneek while using Primary Key to go back",
+    "type": "origins:multiple",
+    "to-cosmos": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:dimension",
+                    "dimension": "minecraft:overworld"
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "/execute in main:cosmos run tp @s -10 10 10"
+                }
+            ]
+        },
+        "cooldown": 25,
+        "key": {
+            "key": "key.origins.primary_active"
+        }
+    },
+    "back-cosmos": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:dimension",
+                    "dimension": "main:cosmos"
+                },
+                {
+                    "type": "origins:sneaking"
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "/execute in minecraft:overworld run tp @s 0 150 0"
+                },
+                {
+                    "type": "origins:apply_effect",
+                    "effect": {
+                        "effect": "minecraft:slow_falling",
+                        "duration": 1000,
+                        "amplifier": 1,
+                        "show_particles": false,
+                        "show_icon": false
+                    }
+                }
+            ]
+        },
+        "cooldown": 25,
+        "key": {
+            "key": "key.origins.primary_active"
+        }
+    }
+}

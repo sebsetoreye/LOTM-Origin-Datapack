@@ -1,0 +1,38 @@
+{
+    "name": "Space Tearing",
+    "hidden": true,
+    "type": "origins:multiple",
+    "activate": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "lotm:pathways/lord_of_mysteries/door/modes/mode",
+                    "comparison": "==",
+                    "compare_to": 2
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:spawn_entity",
+            "entity_type": "minecraft:armor_stand",
+            "tag": "{NoGravity:1b,Silent:1b,Invulnerable:1b,NoBasePlate:1b,PersistenceRequired:1b,Tags:[\"Space-Tear\"]}",
+            "entity_action": {
+                "type": "origins:grant_power",
+                "power": "lotm:pathways/lord_of_mysteries/door/high-sequence-power/space-tear/rift",
+                "source": "lotm"
+            }
+        },
+        "cooldown": 100,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/resource_bar.png",
+            "bar_index": 3
+        },
+        "key": {
+            "key": "key.origins.quaternary_active"
+        }
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "structures": [
+      {
+        "structure": "cosmos:earth_planet",
+        "weight": 1
+      }
+    ],
+    "placement": {
+      "type": "minecraft:concentric_rings",
+      "distance": 0,
+      "spread": 0,
+      "count": 1,
+      "preferred_biomes": [],
+      "salt": 3,
+      "frequency_reduction_method": "default",
+      "frequency": 1
+    }
+  }

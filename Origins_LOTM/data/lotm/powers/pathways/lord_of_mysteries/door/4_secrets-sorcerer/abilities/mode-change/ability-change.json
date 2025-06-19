@@ -1,0 +1,49 @@
+{
+    "name": "Beyonder Ability Change",
+    "description": "As a beyonder you have multiple abilities.\n\nModes:\n\nAll) \n- (Denary) Spirit vision: Consumes 1.5 Spirituality per second for Spirit Vision, enabling the user to see the souls of creatures\n\n- (Nonary) Incomplete Mythical Creature Form: \nProduces 2 madness per second active, and boosts, heath, armor, damage, spirituality regen.\n\n1) Door magic:\n- (Secondary) Door opening: Consumes 3.5 Spirituality per second to phase through blocks.\n\n- (Ternary) Traveling:\nConsumes 6.5 Spirituality per second to open a Door to the Spirit World and Travel there.This gives a form of long distance Teleportation.\n\n- (Quaternary) Blink:\nConsumes 20 Spirituality, to achieve a form of short distance Traveling.\n\n- (Quinary) Transfiguration: \nConsumes 10 Spirituality per hit, and negates it by transform into one illusory Door after another.\n\n2) Trick magic:\n- (Seconary) Freezing: Consumes 15 Spirituality, Freezes the target inplace for 15 seconds.\n\n- (Ternary) Bounce: Consumes 1.5 Spirituality per second to enchant yourself with a bounce spell. Stopping all projectile damage, as they just bounce off you.\n\n- (Quaternary) Burning: Consumes 15 Spirituality, Burns the target inplace for 15 seconds.\n\n- (Quinary) Flashing: Consumes 15 Spirituality, Summons a bright flash, Blinding the target inplace for 25 seconds.",
+    "type": "origins:multiple",
+    "change": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:if_else_list",
+            "actions": [
+                {
+                    "condition": {
+                        "type": "origins:resource",
+                        "resource": "lotm:pathways/lord_of_mysteries/door/modes/mode",
+                        "comparison": "==",
+                        "compare_to": 1
+                    },
+                    "action": {
+                        "type": "origins:modify_resource",
+                        "resource": "lotm:pathways/lord_of_mysteries/door/modes/mode",
+                        "modifier": {
+                            "operation": "set_total",
+                            "value": 3
+                        }
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:resource",
+                        "resource": "lotm:pathways/lord_of_mysteries/door/modes/mode",
+                        "comparison": "==",
+                        "compare_to": 3
+                    },
+                    "action": {
+                        "type": "origins:modify_resource",
+                        "resource": "lotm:pathways/lord_of_mysteries/door/modes/mode",
+                        "modifier": {
+                            "operation": "set_total",
+                            "value": 1
+                        }
+                    }
+                }
+            ]
+        },
+        "cooldown": 1,
+        "key": {
+            "key": "key.origins.primary_active"
+        }
+    }
+}

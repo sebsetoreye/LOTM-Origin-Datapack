@@ -1,0 +1,86 @@
+{
+    "name": "Door Opening",
+    "description": "Consumes 4 Spirituality per second to phase through blocks for 5 seconds.",
+    "type": "origins:multiple",
+    "phase": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:status_effect",
+                    "effect": "minecraft:luck",
+                    "min_amplifier": 0,
+                    "max_amplifier": 0
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "lotm:pathways/lord_of_mysteries/door/9_apprentice/spirituality/spirituality",
+                    "comparison": ">=",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "type": "origins:phasing",
+        "render_type": "blindness",
+        "view_distance": 10,
+        "phase_down_condition": {
+            "type": "origins:sneaking"
+        }
+    },
+    "using-spirituality": {
+        "condition": {
+            "type": "origins:status_effect",
+            "effect": "minecraft:luck",
+            "min_amplifier": 0,
+            "max_amplifier": 0
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:modify_resource",
+            "resource": "lotm:pathways/lord_of_mysteries/door/9_apprentice/spirituality/spirituality",
+            "modifier": {
+                "operation": "addition",
+                "value": -4
+            }
+        }
+    },
+    "warping": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "lotm:pathways/lord_of_mysteries/door/9_apprentice/spirituality/spirituality",
+            "comparison": ">=",
+            "compare_to": 20
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "effect": "minecraft:luck",
+                "duration": 100,
+                "amplifier": 0,
+                "show_particles": false,
+                "show_icon": false
+            }
+        },
+        "cooldown": 100,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+            "bar_index": 5
+        },
+        "key": {
+            "key": "key.origins.secondary_active"
+        }
+    },
+    "colour-change": {
+        "condition": {
+            "type": "origins:status_effect",
+            "effect": "minecraft:luck",
+            "min_amplifier": 0,
+            "max_amplifier": 0
+        },
+        "type": "origins:model_color",
+        "alpha": 0.7
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "powers": [
+        "lotm:global/madness/madness",
+        "lotm:global/madness/madness-reduction",
+        "lotm:global/madness/madness-debuff",
+        "lotm:global/view-mcf/see-mcf",
+        "lotm:global/tag-spirit-world",
+        "lotm:global/cosmos/restrictions"
+    ]
+}

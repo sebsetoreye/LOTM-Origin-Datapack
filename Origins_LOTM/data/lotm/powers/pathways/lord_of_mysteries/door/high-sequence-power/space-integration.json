@@ -1,0 +1,17 @@
+{
+    "name": "space integration",
+    "description": "A Passive Beyonder power serves both as a form of Concealment and an adaption to the various different planetary and interdimensional environments in the universe.",
+    "type": "origins:multiple",
+    "in-cosmos": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:dimension",
+                    "dimension": "main:cosmos"
+                }
+            ]
+        },
+        "type": "origins:simple"
+    }
+}

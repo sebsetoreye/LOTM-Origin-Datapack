@@ -1,0 +1,14 @@
+{
+    "name": "Madness reduction",
+    "hidden": true,
+    "type": "origins:action_over_time",
+    "interval": 200,
+    "entity_action": {
+        "type": "origins:modify_resource",
+        "resource": "lotm:global/madness/madness",
+        "modifier": {
+            "operation": "addition",
+            "value": -1
+        }
+    }
+}

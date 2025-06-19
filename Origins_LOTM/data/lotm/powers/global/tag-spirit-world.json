@@ -1,0 +1,14 @@
+{
+    "name": "Traveling Tag",
+    "description": "Removes Tag used to travel entities to the spiritWorld",
+    "hidden": true,
+    "type": "origins:multiple",
+    "remove": {
+        "type": "origins:action_over_time",
+        "interval": 100,
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "/tag @s remove spirit-tag"
+        }
+    }
+}

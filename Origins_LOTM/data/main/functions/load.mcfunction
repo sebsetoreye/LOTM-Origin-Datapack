@@ -1,0 +1,1 @@
+tellraw @a {"text":"Loaded LOTM Origin Datapack","color":"red","bold":true}

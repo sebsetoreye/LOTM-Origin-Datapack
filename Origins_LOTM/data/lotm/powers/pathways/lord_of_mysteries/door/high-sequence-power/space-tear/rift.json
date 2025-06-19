@@ -1,0 +1,51 @@
+{
+    "name": "rift",
+    "hidden": true,
+    "type": "origins:multiple",
+    "remove": {
+        "type": "origins:action_over_time",
+        "interval": 1200,
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "/kill @s"
+        }
+    },
+    "pull": {
+        "type": "origins:action_over_time",
+        "interval": 5,
+        "entity_action": {
+            "type": "origins:area_of_effect",
+            "radius": 50,
+            "bientity_action": {
+                "type": "origins:add_velocity",
+                "x": 0,
+                "y": 0,
+                "z": -1,
+                "client": true,
+                "server": true,
+                "set": true
+            }
+        }
+    },
+    "damage": {
+        "type": "origins:action_over_time",
+        "interval": 10,
+        "entity_action": {
+            "type": "origins:area_of_effect",
+            "radius": 10,
+            "bientity_action": {
+                "type": "origins:damage",
+                "amount": 2,
+                "damage_type": "minecraft:cramming"
+            }
+        }
+    },
+    "particals": {
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "/function main:pathways/door/rift/particals"
+        }
+    }
+}

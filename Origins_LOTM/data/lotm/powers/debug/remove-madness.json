@@ -1,0 +1,25 @@
+{
+    "name": "remove madness",
+    "description": "removes all madness before removing itself",
+    "type": "origins:multiple",
+    "remove": {
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "/power remove @s lotm:debug/remove-madness"
+        }
+    },
+    "madness": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:modify_resource",
+            "resource": "lotm:global/madness/madness",
+            "modifier": {
+                "operation": "set_total",
+                "value": 0
+            }
+        }
+    }
+}

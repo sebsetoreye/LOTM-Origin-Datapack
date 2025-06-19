@@ -1,0 +1,10 @@
+{
+  "type": "main:cosmos_type",
+  "generator": {
+    "type": "minecraft:flat",
+    "settings": {
+      "biome": "cosmos:cosmos",
+      "layers": []
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Traveler spirituality regen ",
+    "description": "As a Sequence 5: Traveler, you regenerate Spirituality faster than a Scribe",
+    "type": "origins:action_over_time",
+    "interval": 20,
+    "entity_action": {
+        "type": "origins:modify_resource",
+        "resource": "lotm:pathways/lord_of_mysteries/door/5_traveler/spirituality/spirituality",
+        "modifier": {
+            "operation": "addition",
+            "value": 6
+        }
+    }
+}
