@@ -37,7 +37,7 @@
             "power": "lotm:pathways/lord_of_mysteries/door/high-sequence-power/space-tear/start"
         },
         "type": "origins:action_over_time",
-        "interval": 10,
+        "interval": 20,
         "entity_action": {
             "type": "origins:area_of_effect",
             "radius": 10,
