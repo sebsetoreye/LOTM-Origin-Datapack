@@ -11,15 +11,14 @@
         "lotm:global/tag-spirit-world",
         "lotm:global/cognition",
 
-        "lotm:pathways/lord_of_mysteries/door/6_scribe/spirituality/scribe-spirituality",
-        "lotm:pathways/lord_of_mysteries/door/6_scribe/spirituality/scribe-spirituality-regen",
+        "lotm:pathways/lord_of_mysteries/door/6_scribe/spirituality/spirituality",
+        "lotm:pathways/lord_of_mysteries/door/6_scribe/spirituality/spirituality-regen",
         "lotm:pathways/lord_of_mysteries/door/6_scribe/spirituality/madness/gain-madness",
 
         "lotm:pathways/lord_of_mysteries/door/6_scribe/abilities/mode-change/ability-change",
         "lotm:pathways/lord_of_mysteries/door/modes/mode",
         "lotm:pathways/lord_of_mysteries/door/modes/door-mode",
         "lotm:pathways/lord_of_mysteries/door/modes/trick-mode",
-        
         
         "lotm:pathways/lord_of_mysteries/door/6_scribe/abilities/door/door-opening",
         "lotm:pathways/lord_of_mysteries/door/6_scribe/abilities/spirit-vision/spirit-vision",
@@ -28,6 +27,7 @@
         "lotm:pathways/lord_of_mysteries/door/6_scribe/abilities/tricks/bounce",
         "lotm:pathways/lord_of_mysteries/door/6_scribe/abilities/tricks/burning",
         "lotm:pathways/lord_of_mysteries/door/6_scribe/abilities/tricks/flashing"
+
 
 
     ],

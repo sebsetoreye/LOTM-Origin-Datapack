@@ -1,0 +1,14 @@
+{
+    "name": "Scribe spirituality regen ",
+    "description": "As a Sequence 6: Scribe, you regenerate Spirituality faster than a Astrologer",
+    "type": "origins:action_over_time",
+    "interval": 20,
+    "entity_action": {
+        "type": "origins:modify_resource",
+        "resource": "lotm:pathways/lord_of_mysteries/door/6_scribe/spirituality/spirituality",
+        "modifier": {
+            "operation": "addition",
+            "value": 4
+        }
+    }
+}
