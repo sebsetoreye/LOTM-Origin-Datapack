@@ -1,0 +1,14 @@
+{
+    "name": "Planeswalker spirituality regen ",
+    "description": "As a Sequence 2: Planeswalker, you regenerate Spirituality much faster than a Wanderer.",
+    "type": "origins:action_over_time",
+    "interval": 20,
+    "entity_action": {
+        "type": "origins:modify_resource",
+        "resource": "lotm:pathways/lord_of_mysteries/door/2_planeswalker/spirituality/spirituality",
+        "modifier": {
+            "operation": "addition",
+            "value": 30
+        }
+    }
+}

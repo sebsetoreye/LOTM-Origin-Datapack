@@ -1,0 +1,64 @@
+{
+    "name": "2: Planeswalker",
+    "description": "Planeswalker",
+
+    "powers": [
+
+        "lotm:global/madness/madness",
+        "lotm:global/madness/madness-reduction",
+        "lotm:global/madness/madness-debuff",
+        "lotm:global/view-mcf/see-mcf",
+        "lotm:global/tag-spirit-world",
+        "lotm:global/cosmos/restrictions",
+        
+        "lotm:global/mc/mc",
+        "lotm:global/cognition",
+
+        "lotm:pathways/lord_of_mysteries/door/2_planeswalker/spirituality/spirituality",
+        "lotm:pathways/lord_of_mysteries/door/2_planeswalker/spirituality/spirituality-regen",
+        "lotm:pathways/lord_of_mysteries/door/2_planeswalker/spirituality/madness/gain-madness",
+
+        "lotm:pathways/lord_of_mysteries/door/2_planeswalker/abilities/mode-change/ability-change",
+        "lotm:pathways/lord_of_mysteries/door/modes/mode",
+        "lotm:pathways/lord_of_mysteries/door/modes/door-mode",
+        "lotm:pathways/lord_of_mysteries/door/modes/space-mode",
+        "lotm:pathways/lord_of_mysteries/door/modes/trick-mode",
+        
+        "lotm:pathways/lord_of_mysteries/door/2_planeswalker/abilities/spirit-vision/spirit-vision",
+        
+        "lotm:pathways/lord_of_mysteries/door/2_planeswalker/abilities/door/door-opening",
+        "lotm:pathways/lord_of_mysteries/door/2_planeswalker/abilities/door/wandering",
+        "lotm:pathways/lord_of_mysteries/door/2_planeswalker/abilities/door/wandering-cosmos",
+        "lotm:pathways/lord_of_mysteries/door/2_planeswalker/abilities/door/travel/check-spirit",
+        "lotm:pathways/lord_of_mysteries/door/2_planeswalker/abilities/door/travel/check-astral",
+        "lotm:pathways/lord_of_mysteries/door/2_planeswalker/abilities/door/travel/check-cosmos",
+        "lotm:pathways/lord_of_mysteries/door/2_planeswalker/abilities/door/door-transformation",
+
+        "lotm:pathways/lord_of_mysteries/door/2_planeswalker/abilities/space/blink",
+        "lotm:pathways/lord_of_mysteries/door/2_planeswalker/abilities/space/space-tearing",
+        
+
+        "lotm:pathways/lord_of_mysteries/door/2_planeswalker/abilities/tricks/freezing",
+        "lotm:pathways/lord_of_mysteries/door/2_planeswalker/abilities/tricks/bounce",
+        "lotm:pathways/lord_of_mysteries/door/2_planeswalker/abilities/tricks/burning",
+        "lotm:pathways/lord_of_mysteries/door/2_planeswalker/abilities/tricks/flashing",
+
+        "lotm:pathways/lord_of_mysteries/door/high-sequence-power/toggles/door-opening-toggle",
+        "lotm:pathways/lord_of_mysteries/door/high-sequence-power/toggles/door-transformation-toggle",
+
+        "lotm:pathways/lord_of_mysteries/door/2_planeswalker/abilities/mcf/mythical-creature",
+        "lotm:pathways/lord_of_mysteries/door/2_planeswalker/abilities/mcf/mythical-creature-form",
+
+        "lotm:pathways/lord_of_mysteries/door/high-sequence-power/space-integration"
+        
+
+
+
+
+
+    ],
+    "icon": "minecraft:end_crystal",
+    "unchoosable": true,
+    "impact": 3,
+    "order": 10
+}
