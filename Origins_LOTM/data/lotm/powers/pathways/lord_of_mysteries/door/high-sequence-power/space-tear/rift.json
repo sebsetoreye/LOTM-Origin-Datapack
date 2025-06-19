@@ -4,18 +4,22 @@
     "type": "origins:multiple",
     "remove": {
         "type": "origins:action_over_time",
-        "interval": 1200,
+        "interval": 1400,
         "entity_action": {
             "type": "origins:execute_command",
             "command": "/kill @s"
         }
     },
     "pull": {
+        "condition": {
+            "type": "origins:power_active",
+            "power": "lotm:pathways/lord_of_mysteries/door/high-sequence-power/space-tear/start"
+        },
         "type": "origins:action_over_time",
         "interval": 5,
         "entity_action": {
             "type": "origins:area_of_effect",
-            "radius": 50,
+            "radius": 60,
             "bientity_action": {
                 "type": "origins:add_velocity",
                 "x": 0,
@@ -28,6 +32,10 @@
         }
     },
     "damage": {
+        "condition": {
+            "type": "origins:power_active",
+            "power": "lotm:pathways/lord_of_mysteries/door/high-sequence-power/space-tear/start"
+        },
         "type": "origins:action_over_time",
         "interval": 10,
         "entity_action": {
@@ -36,16 +44,30 @@
             "bientity_action": {
                 "type": "origins:damage",
                 "amount": 2,
-                "damage_type": "minecraft:cramming"
+                "damage_type": "out_of_world"
             }
         }
     },
     "particals": {
         "type": "origins:action_over_time",
-        "interval": 20,
+        "interval": 10,
         "entity_action": {
-            "type": "origins:execute_command",
-            "command": "/function main:pathways/door/rift/particals"
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "/execute as @s positioned ~ ~-2 ~ run function main:pathways/door/rift/particals"
+                }
+            ]
+        }
+    },
+    "start": {
+        "type": "origins:action_over_time",
+        "interval": 100,
+        "entity_action": {
+            "type": "origins:grant_power",
+            "power": "lotm:pathways/lord_of_mysteries/door/high-sequence-power/space-tear/start",
+            "source": "lotm"
         }
     }
 }
