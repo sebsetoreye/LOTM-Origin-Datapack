@@ -11,6 +11,12 @@
                     "resource": "lotm:pathways/lord_of_mysteries/door/high-sequence-power/teleport-resource",
                     "comparison": "==",
                     "compare_to": 0
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "lotm:pathways/lord_of_mysteries/door/modes/mode",
+                    "comparison": "==",
+                    "compare_to": 2
                 }
             ]
         },
@@ -54,6 +60,12 @@
                     "resource": "lotm:pathways/lord_of_mysteries/door/high-sequence-power/teleport-check",
                     "comparison": "==",
                     "compare_to": 0
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "lotm:pathways/lord_of_mysteries/door/modes/mode",
+                    "comparison": "==",
+                    "compare_to": 2
                 }
             ]
         },
