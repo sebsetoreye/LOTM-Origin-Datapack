@@ -36,6 +36,7 @@
 
         "lotm:pathways/lord_of_mysteries/door/2_planeswalker/abilities/space/blink",
         "lotm:pathways/lord_of_mysteries/door/2_planeswalker/abilities/space/space-tearing",
+        "lotm:pathways/lord_of_mysteries/door/2_planeswalker/abilities/space/teleport/teleportation",
         
 
         "lotm:pathways/lord_of_mysteries/door/2_planeswalker/abilities/tricks/freezing",
@@ -49,7 +50,9 @@
         "lotm:pathways/lord_of_mysteries/door/2_planeswalker/abilities/mcf/mythical-creature",
         "lotm:pathways/lord_of_mysteries/door/2_planeswalker/abilities/mcf/mythical-creature-form",
 
-        "lotm:pathways/lord_of_mysteries/door/high-sequence-power/space-integration"
+        "lotm:pathways/lord_of_mysteries/door/high-sequence-power/space-integration",
+        "lotm:pathways/lord_of_mysteries/door/high-sequence-power/teleport-resource",
+        "lotm:pathways/lord_of_mysteries/door/high-sequence-power/teleport-check"
         
 
 
