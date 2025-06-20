@@ -1,6 +1,6 @@
 {
     "name": "Burning",
-    "description": "Burning: Consumes 5 Spirituality, Burns the target inplace for 40 seconds.",
+    "description": "Burning: Consumes 5 Spirituality, Burns the target inplace for 100 seconds.",
     "type": "origins:multiple",
     "hidden": true,
     "raycast": {
@@ -27,7 +27,7 @@
             "actions": [
                 {
                     "type": "origins:raycast",
-                    "distance": 10,
+                    "distance": 50,
                     "block": true,
                     "entity": true,
                     "shape_type": "collider",
@@ -36,7 +36,7 @@
                         "type": "origins:target_action",
                         "action": {
                             "type": "origins:set_on_fire",
-                            "duration": 40
+                            "duration": 100
                         }
                     },
                     "command_at_hit": "/particle minecraft:end_rod ~ ~ ~ 0 1 0 0.1 100 force",

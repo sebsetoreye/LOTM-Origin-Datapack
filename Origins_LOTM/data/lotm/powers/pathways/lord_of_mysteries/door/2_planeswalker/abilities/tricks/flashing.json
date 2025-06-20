@@ -1,6 +1,6 @@
 {
     "name": "Flashing",
-    "description": "Flashing: Consumes 5 Spirituality, Summons a bright flash, Blinding the target inplace for 50 seconds.",
+    "description": "Flashing: Consumes 5 Spirituality, Summons a bright flash, Blinding the target inplace for 100 seconds.",
     "hidden": true,
     "type": "origins:multiple",
     "raycast": {
@@ -27,7 +27,7 @@
             "actions": [
                 {
                     "type": "origins:raycast",
-                    "distance": 25,
+                    "distance": 50,
                     "block": true,
                     "entity": true,
                     "shape_type": "collider",
@@ -39,14 +39,14 @@
                             "effects": [
                                 {
                                     "effect": "minecraft:blindness",
-                                    "duration": 1000,
+                                    "duration": 2000,
                                     "amplifier": 100,
                                     "show_particles": false,
                                     "show_icon": false
                                 },
                                 {
                                     "effect": "minecaft:nausea",
-                                    "duration": 1000,
+                                    "duration": 2000,
                                     "amplifier": 100,
                                     "show_particles": false,
                                     "show_icon": false

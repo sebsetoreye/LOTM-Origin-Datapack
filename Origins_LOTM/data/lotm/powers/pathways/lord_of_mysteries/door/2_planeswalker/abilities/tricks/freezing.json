@@ -1,6 +1,6 @@
 {
     "name": "Freezing",
-    "description": "Freezing: Consumes 10 Spirituality, Freezes the target inplace for 40 seconds.",
+    "description": "Freezing: Consumes 10 Spirituality, Freezes the target inplace for 100 seconds.",
     "type": "origins:multiple",
     "hidden": true,
     "raycast": {
@@ -27,7 +27,7 @@
             "actions": [
                 {
                     "type": "origins:raycast",
-                    "distance": 10,
+                    "distance": 50,
                     "block": true,
                     "entity": true,
                     "shape_type": "collider",
@@ -39,21 +39,21 @@
                             "effects": [
                                 {
                                     "effect": "minecraft:slowness",
-                                    "duration": 800,
+                                    "duration": 2000,
                                     "amplifier": 200,
                                     "show_particles": false,
                                     "show_icon": false
                                 },
                                 {
                                     "effect": "minecraft:jump_boost",
-                                    "duration": 800,
+                                    "duration": 2000,
                                     "amplifier": 200,
                                     "show_particles": false,
                                     "show_icon": false
                                 },
                                 {
                                     "effect": "minecraft:darkness",
-                                    "duration": 800,
+                                    "duration": 2000,
                                     "amplifier": 200,
                                     "show_particles": false,
                                     "show_icon": false
