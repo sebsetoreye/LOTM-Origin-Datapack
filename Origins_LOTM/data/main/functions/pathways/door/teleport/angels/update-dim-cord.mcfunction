@@ -9,9 +9,9 @@ execute as @a[scores={tpDim=5}] at @s run execute in main:astral_world run tp @s
 #check cords
 execute as @a[scores={check.cord=1}] run tellraw @s [{"text":"----------"}]
 execute as @a[scores={check.cord=1}] run tellraw @s [{"text":"Your Cords Are","color":"yellow"}]
-execute as @a[scores={check.cord=1}] run tellraw @s [{"text":"X = "},{"score":{"name":"@s","objective":"lotm.door.angle.posx"}}]
-execute as @a[scores={check.cord=1}] run tellraw @s [{"text":"Y = "},{"score":{"name":"@s","objective":"lotm.door.angle.posy"}}]
-execute as @a[scores={check.cord=1}] run tellraw @s [{"text":"Z = "},{"score":{"name":"@s","objective":"lotm.door.angle.posz"}}]
+execute as @a[scores={check.cord=1}] run tellraw @s [{"text":"X = "},{"score":{"name":"@s","objective":"lotm.door.angel.posx"}}]
+execute as @a[scores={check.cord=1}] run tellraw @s [{"text":"Y = "},{"score":{"name":"@s","objective":"lotm.door.angel.posy"}}]
+execute as @a[scores={check.cord=1}] run tellraw @s [{"text":"Z = "},{"score":{"name":"@s","objective":"lotm.door.angel.posz"}}]
 execute as @a[scores={check.cord=1}] run tellraw @s [{"text":"----------"}]
 
 #reset dim check

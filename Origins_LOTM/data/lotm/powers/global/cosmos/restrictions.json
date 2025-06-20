@@ -36,7 +36,7 @@
                 {
                     "inverted": true,
                     "type": "origins:power_active",
-                    "power": "lotm:global/cosmos/angle"
+                    "power": "lotm:global/cosmos/angel"
                 },
                 {
                     "type": "origins:dimension",

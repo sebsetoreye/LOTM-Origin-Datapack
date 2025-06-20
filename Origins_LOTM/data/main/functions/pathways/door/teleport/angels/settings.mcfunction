@@ -15,40 +15,40 @@ tellraw @s {"text":"Astral World","color":"#A1F6FF","clickEvent":{"action":"run_
 
 tellraw @s "-----------"
 tellraw @s {"bold":true,"color":"#00F7FF","text":"X:","underlined":true}
-tellraw @s {"text":"+1","color":"#FF0000","clickEvent":{"action":"run_command","value":"/trigger lotm.door.angle.posx add 1"}}
-tellraw @s {"text":"-1","color":"#FF0000","clickEvent":{"action":"run_command","value":"/trigger lotm.door.angle.posx add -1"}}
+tellraw @s {"text":"+1","color":"#FF0000","clickEvent":{"action":"run_command","value":"/trigger lotm.door.angel.posx add 1"}}
+tellraw @s {"text":"-1","color":"#FF0000","clickEvent":{"action":"run_command","value":"/trigger lotm.door.angel.posx add -1"}}
 
-tellraw @s {"text":"+10","color":"#FF0000","clickEvent":{"action":"run_command","value":"/trigger lotm.door.angle.posx add 10"}}
-tellraw @s {"text":"-10","color":"#FF0000","clickEvent":{"action":"run_command","value":"/trigger lotm.door.angle.posx add -10"}}
+tellraw @s {"text":"+10","color":"#FF0000","clickEvent":{"action":"run_command","value":"/trigger lotm.door.angel.posx add 10"}}
+tellraw @s {"text":"-10","color":"#FF0000","clickEvent":{"action":"run_command","value":"/trigger lotm.door.angel.posx add -10"}}
 
-tellraw @s {"text":"+100","color":"#FF0000","clickEvent":{"action":"run_command","value":"/trigger lotm.door.angle.posx add 100"}}
-tellraw @s {"text":"-100","color":"#FF0000","clickEvent":{"action":"run_command","value":"/trigger lotm.door.angle.posx add -100"}}
+tellraw @s {"text":"+100","color":"#FF0000","clickEvent":{"action":"run_command","value":"/trigger lotm.door.angel.posx add 100"}}
+tellraw @s {"text":"-100","color":"#FF0000","clickEvent":{"action":"run_command","value":"/trigger lotm.door.angel.posx add -100"}}
 
-tellraw @s {"text":"+1000","color":"#FF0000","clickEvent":{"action":"run_command","value":"/trigger lotm.door.angle.posx add 1000"}}
-tellraw @s {"text":"-1000","color":"#FF0000","clickEvent":{"action":"run_command","value":"/trigger lotm.door.angle.posx add -1000"}}
+tellraw @s {"text":"+1000","color":"#FF0000","clickEvent":{"action":"run_command","value":"/trigger lotm.door.angel.posx add 1000"}}
+tellraw @s {"text":"-1000","color":"#FF0000","clickEvent":{"action":"run_command","value":"/trigger lotm.door.angel.posx add -1000"}}
 
 tellraw @s "-----------"
 tellraw @s {"bold":true,"color":"#00F7FF","text":"Y:","underlined":true}
-tellraw @s {"text":"+1","color":"#FF0000","clickEvent":{"action":"run_command","value":"/trigger lotm.door.angle.posy add 1"}}
-tellraw @s {"text":"-1","color":"#FF0000","clickEvent":{"action":"run_command","value":"/trigger lotm.door.angle.posy add -1"}}
+tellraw @s {"text":"+1","color":"#FF0000","clickEvent":{"action":"run_command","value":"/trigger lotm.door.angel.posy add 1"}}
+tellraw @s {"text":"-1","color":"#FF0000","clickEvent":{"action":"run_command","value":"/trigger lotm.door.angel.posy add -1"}}
 
-tellraw @s {"text":"+10","color":"#FF0000","clickEvent":{"action":"run_command","value":"/trigger lotm.door.angle.posy add 10"}}
-tellraw @s {"text":"-10","color":"#FF0000","clickEvent":{"action":"run_command","value":"/trigger lotm.door.angle.posy add -10"}}
+tellraw @s {"text":"+10","color":"#FF0000","clickEvent":{"action":"run_command","value":"/trigger lotm.door.angel.posy add 10"}}
+tellraw @s {"text":"-10","color":"#FF0000","clickEvent":{"action":"run_command","value":"/trigger lotm.door.angel.posy add -10"}}
 
-tellraw @s {"text":"+100","color":"#FF0000","clickEvent":{"action":"run_command","value":"/trigger lotm.door.angle.posy add 100"}}
-tellraw @s {"text":"-100","color":"#FF0000","clickEvent":{"action":"run_command","value":"/trigger lotm.door.angle.posy add -100"}}
+tellraw @s {"text":"+100","color":"#FF0000","clickEvent":{"action":"run_command","value":"/trigger lotm.door.angel.posy add 100"}}
+tellraw @s {"text":"-100","color":"#FF0000","clickEvent":{"action":"run_command","value":"/trigger lotm.door.angel.posy add -100"}}
 
 tellraw @s "-----------"
 tellraw @s {"bold":true,"color":"#00F7FF","text":"Z:","underlined":true}
-tellraw @s {"text":"+1","color":"#FF0000","clickEvent":{"action":"run_command","value":"/trigger lotm.door.angle.posz add 1"}}
-tellraw @s {"text":"-1","color":"#FF0000","clickEvent":{"action":"run_command","value":"/trigger lotm.door.angle.posz add -1"}}
+tellraw @s {"text":"+1","color":"#FF0000","clickEvent":{"action":"run_command","value":"/trigger lotm.door.angel.posz add 1"}}
+tellraw @s {"text":"-1","color":"#FF0000","clickEvent":{"action":"run_command","value":"/trigger lotm.door.angel.posz add -1"}}
 
-tellraw @s {"text":"+10","color":"#FF0000","clickEvent":{"action":"run_command","value":"/trigger lotm.door.angle.posz add 10"}}
-tellraw @s {"text":"-10","color":"#FF0000","clickEvent":{"action":"run_command","value":"/trigger lotm.door.angle.posz add -10"}}
+tellraw @s {"text":"+10","color":"#FF0000","clickEvent":{"action":"run_command","value":"/trigger lotm.door.angel.posz add 10"}}
+tellraw @s {"text":"-10","color":"#FF0000","clickEvent":{"action":"run_command","value":"/trigger lotm.door.angel.posz add -10"}}
 
-tellraw @s {"text":"+100","color":"#FF0000","clickEvent":{"action":"run_command","value":"/trigger lotm.door.angle.posz add 100"}}
-tellraw @s {"text":"-100","color":"#FF0000","clickEvent":{"action":"run_command","value":"/trigger lotm.door.angle.posz add -100"}}
+tellraw @s {"text":"+100","color":"#FF0000","clickEvent":{"action":"run_command","value":"/trigger lotm.door.angel.posz add 100"}}
+tellraw @s {"text":"-100","color":"#FF0000","clickEvent":{"action":"run_command","value":"/trigger lotm.door.angel.posz add -100"}}
 
-tellraw @s {"text":"+1000","color":"#FF0000","clickEvent":{"action":"run_command","value":"/trigger lotm.door.angle.posz add 1000"}}
-tellraw @s {"text":"-1000","color":"#FF0000","clickEvent":{"action":"run_command","value":"/trigger lotm.door.angle.posz add -1000"}}
+tellraw @s {"text":"+1000","color":"#FF0000","clickEvent":{"action":"run_command","value":"/trigger lotm.door.angel.posz add 1000"}}
+tellraw @s {"text":"-1000","color":"#FF0000","clickEvent":{"action":"run_command","value":"/trigger lotm.door.angel.posz add -1000"}}
 tellraw @s "-----------"
