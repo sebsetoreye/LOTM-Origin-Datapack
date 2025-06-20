@@ -1,5 +1,5 @@
 {
-    "name": "Incomplete Mythical Creature Form",
+    "name": "Mythical Creature Form",
     "description": "A Mythical Creature Form is not something that could be described superficially or in three-dimensions, as apart from quantitative terms like length, width, height, they're also a potpourri of complex knowledge, godhood characteristics, and secret symbols. Ordinary people and Beyonders below Sequence 4 will suffer tremendous damage from a simply glance at a Mythical Creature, without any godhood they will be corrupted by the spirituality, having their minds thrashed.",
     "hidden": true,
     "type": "origins:multiple",
@@ -19,22 +19,6 @@
         "type": "origins:model_color",
         "red": 0,
         "alpha": 0.8
-    },
-    "create-madness": {
-        "condition": {
-            "type": "origins:power_active",
-            "power": "*:*_toggle"
-        },
-        "type": "origins:action_over_time",
-        "interval": 20,
-        "entity_action": {
-            "type": "origins:modify_resource",
-            "resource": "lotm:global/madness/madness",
-            "modifier": {
-                "operation": "addition",
-                "value": 4
-            }
-        }
     },
     "adding-mcf": {
         "condition": {
@@ -63,11 +47,18 @@
         "interval": 20,
         "entity_action": {
             "type": "origins:modify_resource",
-            "resource": "lotm:pathways/lord_of_mysteries/door/3_wanderer/spirituality/spirituality",
+            "resource": "lotm:pathways/lord_of_mysteries/door/1_key-of-stars/spirituality/spirituality",
             "modifier": {
                 "operation": "addition",
-                "value": 15
+                "value": 50
             }
+        }
+    },
+    "increased-regen": {
+        "type": "origins:modify_healing",
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 1
         }
     },
     "stat-increase": {
@@ -85,22 +76,22 @@
             {
                 "attribute": "minecraft:generic.armor",
                 "operation": "addition",
-                "value": 10
+                "value": 20
             },
             {
                 "attribute": "minecraft:generic.armor_toughness",
                 "operation": "addition",
-                "value": 10
+                "value": 25
             },
             {
                 "attribute": "minecraft:generic.max_health",
                 "operation": "addition",
-                "value": 6
+                "value": 20
             },
             {
                 "attribute": "generic.attack_damage",
-                "operation": "addition",
-                "value": 6
+                "operation": "multiply_base",
+                "value": 2
             }
         ],
         "tick_rate": 20,

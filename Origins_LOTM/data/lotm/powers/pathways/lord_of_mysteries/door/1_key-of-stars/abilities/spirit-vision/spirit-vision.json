@@ -1,0 +1,70 @@
+{
+    "name": "Spirit Vision",
+    "description": "Consumes 1 Spirituality per second for Spirit Vision",
+    "hidden": true,
+    "type": "origins:multiple",
+    "toggle": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "lotm:pathways/lord_of_mysteries/door/1_key-of-stars/spirituality/spirituality",
+                    "comparison": ">=",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "type": "origins:toggle",
+        "active_by_default": false,
+        "key": {
+            "key": "key.origins.denary_active"
+        },
+        "retain_state": true
+    },
+    "night-vision": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:power_active",
+                    "power": "*:*_toggle"
+                }
+            ]
+        },
+        "type": "origins:night_vision",
+        "strength": 1
+    },
+    "spirits": {
+        "condition": {
+            "type": "origins:power_active",
+            "power": "*:*_toggle"
+        },
+        "type": "origins:entity_glow",
+        "use_teams": false
+    },
+    "use-spirituality": {
+        "condition": {
+            "type": "origins:power_active",
+            "power": "*:*_toggle"
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:modify_resource",
+            "resource": "lotm:pathways/lord_of_mysteries/door/1_key-of-stars/spirituality/spirituality",
+            "modifier": {
+                "operation": "addition",
+                "value": -1
+            }
+        }
+    },
+    "player-change": {
+        "condition": {
+            "type": "origins:power_active",
+            "power": "*:*_toggle"
+        },
+        "type": "origins:model_color",
+        "alpha": 0.9
+    }
+}

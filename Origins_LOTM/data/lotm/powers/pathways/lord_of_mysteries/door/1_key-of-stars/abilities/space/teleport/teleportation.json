@@ -1,0 +1,151 @@
+{
+    "name": "Teleport",
+    "hidden": true,
+    "type": "origins:multiple",
+    "set-location": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "lotm:pathways/lord_of_mysteries/door/high-sequence-power/teleport-resource",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "lotm:pathways/lord_of_mysteries/door/modes/mode",
+                    "comparison": "==",
+                    "compare_to": 2
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "/function main:pathways/door/teleport/angels/settings"
+                },
+                {
+                    "type": "origins:set_resource",
+                    "resource": "lotm:pathways/lord_of_mysteries/door/high-sequence-power/teleport-resource",
+                    "value": 1
+                },
+                {
+                    "type": "origins:set_resource",
+                    "resource": "lotm:pathways/lord_of_mysteries/door/high-sequence-power/teleport-check",
+                    "value": 1
+                }
+            ]
+        },
+        "cooldown": 20,
+        "key": {
+            "key": "key.origins.quinary_active"
+        }
+    },
+    "tp-to-space": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "lotm:pathways/lord_of_mysteries/door/high-sequence-power/teleport-resource",
+                    "comparison": "==",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "lotm:pathways/lord_of_mysteries/door/high-sequence-power/teleport-check",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "lotm:pathways/lord_of_mysteries/door/modes/mode",
+                    "comparison": "==",
+                    "compare_to": 2
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "tag @s add lotm.memory_remember"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "summon minecraft:marker ~ ~ ~ {Tags:[\"lotm.memory\"]}"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @e[type=minecraft:marker,tag=lotm.memory] run function main:pathways/door/teleport/angels/teleport"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute as @s run function main:pathways/door/teleport/reset-scoreboard"
+                },
+                {
+                    "type": "origins:set_resource",
+                    "resource": "lotm:pathways/lord_of_mysteries/door/high-sequence-power/teleport-resource",
+                    "value": 0
+                },
+                {
+                    "type": "origins:modify_resource",
+                    "resource": "lotm:pathways/lord_of_mysteries/door/1_key-of-stars/spirituality/spirituality",
+                    "modifier": {
+                        "operation": "addition",
+                        "value": -200
+                    }
+                }
+            ]
+        },
+        "cooldown": 20,
+        "key": {
+            "key": "key.origins.quinary_active",
+            "continuous": false
+        }
+    },
+    "remove-check": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "lotm:pathways/lord_of_mysteries/door/high-sequence-power/teleport-resource",
+            "comparison": "==",
+            "compare_to": 1
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:set_resource",
+            "resource": "lotm:pathways/lord_of_mysteries/door/high-sequence-power/teleport-check",
+            "value": 0
+        }
+    },
+    "reset-trigger": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "lotm:pathways/lord_of_mysteries/door/high-sequence-power/teleport-resource",
+            "comparison": "==",
+            "compare_to": 1
+        },
+        "type": "origins:action_over_time",
+        "interval": 10,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "/function main:pathways/door/teleport/reset-triggers"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "/function main:pathways/door/teleport/angels/update-dim-cord"
+                }
+            ]
+        }
+    }
+}

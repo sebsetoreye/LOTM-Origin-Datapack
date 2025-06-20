@@ -1,0 +1,130 @@
+{
+    "name": "Door Transformation",
+    "description": "Consumes 2 Spirituality per hit, and negates it by transform into one illusory Door after another.",
+    "hidden": true,
+    "type": "origins:multiple",
+    "toggle": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "lotm:pathways/lord_of_mysteries/door/1_key-of-stars/spirituality/spirituality",
+                    "comparison": ">=",
+                    "compare_to": 2
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "lotm:pathways/lord_of_mysteries/door/modes/mode",
+                    "comparison": "==",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:if_else_list",
+            "actions": [
+                {
+                    "condition": {
+                        "type": "origins:resource",
+                        "resource": "lotm:pathways/lord_of_mysteries/door/high-sequence-power/toggles/door-transformation-toggle",
+                        "comparison": "==",
+                        "compare_to": 0
+                    },
+                    "action": {
+                        "type": "origins:set_resource",
+                        "resource": "lotm:pathways/lord_of_mysteries/door/high-sequence-power/toggles/door-transformation-toggle",
+                        "value": 1
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:resource",
+                        "resource": "lotm:pathways/lord_of_mysteries/door/high-sequence-power/toggles/door-transformation-toggle",
+                        "comparison": "==",
+                        "compare_to": 1
+                    },
+                    "action": {
+                        "type": "origins:set_resource",
+                        "resource": "lotm:pathways/lord_of_mysteries/door/high-sequence-power/toggles/door-transformation-toggle",
+                        "value": 0
+                    }
+                }
+            ]
+        },
+        "key": {
+            "key": "key.origins.quinary_active"
+        }
+    },
+    "immune": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "lotm:pathways/lord_of_mysteries/door/high-sequence-power/toggles/door-transformation-toggle",
+                    "comparison": "==",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "lotm:pathways/lord_of_mysteries/door/1_key-of-stars/spirituality/spirituality",
+                    "comparison": ">=",
+                    "compare_to": 8
+                }
+            ]
+        },
+        "type": "origins:modify_damage_taken",
+        "modifier": {
+            "operation": "set_total",
+            "value": 0,
+            "name": "remove"
+        },
+        "self_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:spawn_particles",
+                    "particle": "minecraft:portal",
+                    "count": 100,
+                    "speed": 0.2,
+                    "force": true
+                },
+                {
+                    "type": "origins:modify_resource",
+                    "resource": "lotm:pathways/lord_of_mysteries/door/1_key-of-stars/spirituality/spirituality",
+                    "modifier": {
+                        "operation": "addition",
+                        "value": -2
+                    }
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:entity.enderman.teleport",
+                    "volume": 1,
+                    "pitch": 2
+                }
+            ]
+        }
+    },
+    "player-change": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "lotm:pathways/lord_of_mysteries/door/high-sequence-power/toggles/door-transformation-toggle",
+            "comparison": "==",
+            "compare_to": 1
+        },
+        "type": "origins:model_color",
+        "alpha": 0.7
+    },
+    "turn-off-at-0-spirituality": {
+        "type": "origins:action_when_damage_taken",
+        "entity_action": {
+            "type": "origins:set_resource",
+            "resource": "lotm:pathways/lord_of_mysteries/door/high-sequence-power/toggles/door-transformation-toggle",
+            "value": 0
+        },
+        "cooldown": 1
+    }
+}

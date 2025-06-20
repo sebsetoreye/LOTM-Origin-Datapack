@@ -1,0 +1,41 @@
+{
+    "name": "Gain Madness",
+    "hidden": true,
+    "type": "origins:multiple",
+    "below-20-perc": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "lotm:pathways/lord_of_mysteries/door/1_key-of-stars/spirituality/spirituality",
+            "comparison": "<",
+            "compare_to": 240 
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:modify_resource",
+            "resource": "lotm:global/madness/madness",
+            "modifier": {
+                "operation": "addition",
+                "value": 1
+            }
+        }
+    },
+    "below-50-per": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "lotm:pathways/lord_of_mysteries/door/1_key-of-stars/spirituality/spirituality",
+            "comparison": "<",
+            "compare_to": 600
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:modify_resource",
+            "resource": "lotm:global/madness/madness",
+            "modifier": {
+                "operation": "addition",
+                "value": 1
+            }
+        }
+    }
+}

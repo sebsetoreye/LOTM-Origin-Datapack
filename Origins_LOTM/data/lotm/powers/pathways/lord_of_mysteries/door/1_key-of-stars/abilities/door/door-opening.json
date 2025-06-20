@@ -1,0 +1,112 @@
+{
+    "name": "Door Opening",
+    "description": "Consumes 3 Spirituality per second to phase through blocks",
+    "hidden": true,
+    "type": "origins:multiple",
+    "phase": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "lotm:pathways/lord_of_mysteries/door/high-sequence-power/toggles/door-opening-toggle",
+                    "comparison": "==",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "type": "origins:phasing",
+        "render_type": "none",
+        "view_distance": 80,
+        "phase_down_condition": {
+            "type": "origins:sneaking"
+        }
+    },
+    "toggle": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "lotm:pathways/lord_of_mysteries/door/1_key-of-stars/spirituality/spirituality",
+                    "comparison": ">=",
+                    "compare_to": 4
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "lotm:pathways/lord_of_mysteries/door/modes/mode",
+                    "comparison": "==",
+                    "compare_to": 1
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:dimension",
+                    "dimension": "main:spirit_world"
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:if_else_list",
+            "actions": [
+                {
+                    "condition": {
+                        "type": "origins:resource",
+                        "resource": "lotm:pathways/lord_of_mysteries/door/high-sequence-power/toggles/door-opening-toggle",
+                        "comparison": "==",
+                        "compare_to": 0
+                    },
+                    "action": {
+                        "type": "origins:set_resource",
+                        "resource": "lotm:pathways/lord_of_mysteries/door/high-sequence-power/toggles/door-opening-toggle",
+                        "value": 1
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:resource",
+                        "resource": "lotm:pathways/lord_of_mysteries/door/high-sequence-power/toggles/door-opening-toggle",
+                        "comparison": "==",
+                        "compare_to": 1
+                    },
+                    "action": {
+                        "type": "origins:set_resource",
+                        "resource": "lotm:pathways/lord_of_mysteries/door/high-sequence-power/toggles/door-opening-toggle",
+                        "value": 0
+                    }
+                }
+            ]
+        },
+        "key": {
+            "key": "key.origins.secondary_active"
+        }
+    },
+    "use-spirituality": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "lotm:pathways/lord_of_mysteries/door/high-sequence-power/toggles/door-opening-toggle",
+            "comparison": "==",
+            "compare_to": 1
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:modify_resource",
+            "resource": "lotm:pathways/lord_of_mysteries/door/1_key-of-stars/spirituality/spirituality",
+            "modifier": {
+                "operation": "addition",
+                "value": -3
+            }
+        }
+    },
+    "player-change": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "lotm:pathways/lord_of_mysteries/door/high-sequence-power/toggles/door-opening-toggle",
+            "comparison": "==",
+            "compare_to": 1
+        },
+        "type": "origins:model_color",
+        "alpha": 0.8
+    }
+}

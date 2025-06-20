@@ -1,0 +1,408 @@
+{
+    "name": "Wandering",
+    "description": "Consumes 6.5 Spirituality per second to open a Door to the Spirit World, Astral World and The Cosmos.",
+    "hidden": true,
+    "type": "origins:multiple",
+    "to-spirit_world_": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "lotm:pathways/lord_of_mysteries/door/1_key-of-stars/abilities/door/travel/check-spirit",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:dimension",
+                    "dimension": "minecraft:overworld"
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "lotm:pathways/lord_of_mysteries/door/modes/mode",
+                    "comparison": "==",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "/execute in main:spirit_world run tp @s ~ 1 ~"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "/tp @e[tag=spirit-tag] @s"
+                }
+            ]
+        },
+        "cooldown": 25,
+        "key": {
+            "key": "key.origins.ternary_active"
+        }
+    },
+    "use-spirituality": {
+        "condition": {
+            "type": "origins:dimension",
+            "dimension": "main:spirit_world"
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:modify_resource",
+            "resource": "lotm:pathways/lord_of_mysteries/door/1_key-of-stars/spirituality/spirituality",
+            "modifier": {
+                "operation": "addition",
+                "value": -6.5
+            }
+        }
+    },
+    "player-change-spirit": {
+        "condition": {
+            "type": "origins:dimension",
+            "dimension": "main:spirit_world"
+        },
+        "type": "origins:model_color",
+        "alpha": 0.9
+    },
+    "check-spirit_world": {
+        "condition": {
+            "type": "origins:dimension",
+            "dimension": "main:spirit_world"
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:set_resource",
+            "resource": "lotm:pathways/lord_of_mysteries/door/1_key-of-stars/abilities/door/travel/check-spirit",
+            "value": 1
+        }
+    },
+    "remove-spirit_world": {
+        "condition": {
+            "inverted": true,
+            "type": "origins:dimension",
+            "dimension": "main:spirit_world"
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:set_resource",
+            "resource": "lotm:pathways/lord_of_mysteries/door/1_key-of-stars/abilities/door/travel/check-spirit",
+            "value": 0
+        }
+    },
+    "back-spirit_world": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:dimension",
+                    "dimension": "main:spirit_world"
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "lotm:pathways/lord_of_mysteries/door/1_key-of-stars/abilities/door/travel/check-spirit",
+                    "comparison": "==",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "lotm:pathways/lord_of_mysteries/door/modes/mode",
+                    "comparison": "==",
+                    "compare_to": 1
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:sneaking"
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "/execute in minecraft:overworld run tp @s ~ 70 ~"
+                },
+                {
+                    "type": "origins:apply_effect",
+                    "effect": {
+                        "effect": "minecraft:slow_falling",
+                        "duration": 200,
+                        "amplifier": 1,
+                        "show_particles": false,
+                        "show_icon": false
+                    }
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "/tp @e[tag=spirit-tag] @s"
+                }
+            ]
+        },
+        "cooldown": 25,
+        "key": {
+            "key": "key.origins.ternary_active"
+        }
+    },
+    "bring-others": {
+        "condition": {
+            "type": "origins:sneaking"
+        },
+        "type": "origins:target_action_on_hit",
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "/tag @s add spirit-tag"
+        },
+        "cooldown": 1
+    },
+    "to-astral-world": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:dimension",
+                    "dimension": "main:spirit_world"
+                },
+                {
+                    "type": "origins:sneaking"
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "lotm:pathways/lord_of_mysteries/door/modes/mode",
+                    "comparison": "==",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "lotm:pathways/lord_of_mysteries/door/1_key-of-stars/abilities/door/travel/check-astral",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "lotm:pathways/lord_of_mysteries/door/1_key-of-stars/abilities/door/travel/check-spirit",
+                    "comparison": "==",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "/execute in main:astral_world run tp @s ~ 1 ~"
+                }
+            ]
+        },
+        "cooldown": 25,
+        "key": {
+            "key": "key.origins.ternary_active"
+        }
+    },
+    "astral_world": {
+        "condition": {
+            "type": "origins:dimension",
+            "dimension": "main:astral_world"
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:set_resource",
+            "resource": "lotm:pathways/lord_of_mysteries/door/1_key-of-stars/abilities/door/travel/check-astral",
+            "value": 1
+        }
+    },
+    "remove-astral_world": {
+        "condition": {
+            "inverted": true,
+            "type": "origins:dimension",
+            "dimension": "main:astral_world"
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:set_resource",
+            "resource": "lotm:pathways/lord_of_mysteries/door/1_key-of-stars/abilities/door/travel/check-astral",
+            "value": 0
+        }
+    },
+    "back-astral-world": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:dimension",
+                    "dimension": "main:astral_world"
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "lotm:pathways/lord_of_mysteries/door/1_key-of-stars/abilities/door/travel/check-astral",
+                    "comparison": "==",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "lotm:pathways/lord_of_mysteries/door/modes/mode",
+                    "comparison": "==",
+                    "compare_to": 1
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:sneaking"
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "/execute in main:spirit_world run tp @s ~ 1 ~"
+                }
+            ]
+        },
+        "cooldown": 25,
+        "key": {
+            "key": "key.origins.ternary_active"
+        }
+    },
+    "player-change-astral": {
+        "condition": {
+            "type": "origins:dimension",
+            "dimension": "main:astral_world"
+        },
+        "type": "origins:model_color",
+        "alpha": 0.7
+    },
+    "to-cosmos": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:dimension",
+                    "dimension": "main:astral_world"
+                },
+                {
+                    "type": "origins:sneaking"
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "lotm:pathways/lord_of_mysteries/door/modes/mode",
+                    "comparison": "==",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "lotm:pathways/lord_of_mysteries/door/1_key-of-stars/abilities/door/travel/check-cosmos",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "lotm:pathways/lord_of_mysteries/door/1_key-of-stars/abilities/door/travel/check-astral",
+                    "comparison": "==",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "/execute in main:cosmos run tp @s 0 10 0"
+                }
+            ]
+        },
+        "cooldown": 25,
+        "key": {
+            "key": "key.origins.ternary_active"
+        }
+    },
+    "check-cosmos": {
+        "condition": {
+            "type": "origins:dimension",
+            "dimension": "main:cosmos"
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:set_resource",
+            "resource": "lotm:pathways/lord_of_mysteries/door/1_key-of-stars/abilities/door/travel/check-cosmos",
+            "value": 1
+        }
+    },
+    "remove-cosmos": {
+        "condition": {
+            "inverted": true,
+            "type": "origins:dimension",
+            "dimension": "main:cosmos"
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:set_resource",
+            "resource": "lotm:pathways/lord_of_mysteries/door/1_key-of-stars/abilities/door/travel/check-cosmos",
+            "value": 0
+        }
+    },
+    "back-cosmos": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:dimension",
+                    "dimension": "main:cosmos"
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "lotm:pathways/lord_of_mysteries/door/1_key-of-stars/abilities/door/travel/check-cosmos",
+                    "comparison": "==",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "lotm:pathways/lord_of_mysteries/door/modes/mode",
+                    "comparison": "==",
+                    "compare_to": 1
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:sneaking"
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "/execute if entity @e[type=minecraft:armor_stand,tag=Earth,limit=1,distance=0..30] in main:astral_world run tp @s 0 1 0"
+                }
+            ]
+        },
+        "cooldown": 25,
+        "key": {
+            "key": "key.origins.ternary_active"
+        }
+    },
+    "player-change-cosmos": {
+        "condition": {
+            "type": "origins:dimension",
+            "dimension": "main:cosmos"
+        },
+        "type": "origins:model_color",
+        "alpha": 0.7
+    }
+}

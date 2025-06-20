@@ -6,7 +6,7 @@
         "type": "origins:modify_healing",
         "modifier": {
             "operation": "multiply_total",
-            "value": 2
+            "value": 3
         }
     },
     "increased-health": {
@@ -14,7 +14,7 @@
         "modifier": {
             "attribute": "minecraft:generic.max_health",
             "operation": "addition",
-            "value": 20
+            "value": 40
         },
         "update_health": true
     },
@@ -24,12 +24,12 @@
             {
                 "attribute": "minecraft:generic.armor",
                 "operation": "addition",
-                "value": 20
+                "value": 30
             },
             {
                 "attribute": "minecraft:generic.armor_toughness",
                 "operation": "addition",
-                "value": 20
+                "value": 30
             }
         ],
         "update_health": true
@@ -52,7 +52,7 @@
             {
                 "attribute": "generic.attack_damage",
                 "operation": "addition",
-                "value": 10
+                "value": 20
             }
         ],
         "update_health": true
