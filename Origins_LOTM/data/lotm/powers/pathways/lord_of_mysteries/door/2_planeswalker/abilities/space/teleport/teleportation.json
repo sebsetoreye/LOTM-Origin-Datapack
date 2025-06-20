@@ -1,4 +1,5 @@
 {
+    "name": "Teleport",
     "hidden": true,
     "type": "origins:multiple",
     "set-location": {
@@ -80,6 +81,14 @@
                     "type": "origins:set_resource",
                     "resource": "lotm:pathways/lord_of_mysteries/door/high-sequence-power/teleport-resource",
                     "value": 0
+                },
+                {
+                    "type": "origins:modify_resource",
+                    "resource": "lotm:pathways/lord_of_mysteries/door/2_planeswalker/spirituality/spirituality",
+                    "modifier": {
+                        "operation": "addition",
+                        "value": -200
+                    }
                 }
             ]
         },
