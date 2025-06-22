@@ -38,7 +38,7 @@
                 }
             ]
         },
-        "cooldown": 900,
+        "cooldown": 700,
         "hud_render": {
             "should_render": true,
             "sprite_location": "origins:textures/gui/resource_bar.png",
