@@ -23,7 +23,7 @@
     "below-50-per": {
         "condition": {
             "type": "origins:resource",
-            "resource": "lotm:pathways/lord_of_mysteries/door/4_secrets-sorcerer/spirituality/spirituality",
+            "resource": "lotm:pathways/lord_of_mysteries/door/7_astrologer/spirituality/spirituality",
             "comparison": "<",
             "compare_to": 93
         },

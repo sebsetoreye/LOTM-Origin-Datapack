@@ -74,6 +74,11 @@
             "type": "origins:and",
             "actions": [
                 {
+                    "type": "origins:set_resource",
+                    "resource": "lotm:pathways/lord_of_mysteries/door/high-sequence-power/teleport-resource",
+                    "value": 0
+                },
+                {
                     "type": "origins:execute_command",
                     "command": "tag @s add lotm.memory_remember"
                 },
@@ -88,11 +93,6 @@
                 {
                     "type": "origins:execute_command",
                     "command": "execute as @s run function main:pathways/door/teleport/reset-scoreboard"
-                },
-                {
-                    "type": "origins:set_resource",
-                    "resource": "lotm:pathways/lord_of_mysteries/door/high-sequence-power/teleport-resource",
-                    "value": 0
                 },
                 {
                     "type": "origins:modify_resource",
