@@ -54,12 +54,8 @@
 
         "lotm:pathways/lord_of_mysteries/door/high-sequence-power/space-integration",
         "lotm:pathways/lord_of_mysteries/door/high-sequence-power/teleport-resource",
-        "lotm:pathways/lord_of_mysteries/door/high-sequence-power/teleport-check"
-        
-
-
-
-
+        "lotm:pathways/lord_of_mysteries/door/high-sequence-power/teleport-check",
+        "lotm:pathways/lord_of_mysteries/door/high-sequence-power/teleport-check-1"
 
     ],
     "icon": "minecraft:end_crystal",
