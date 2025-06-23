@@ -1,0 +1,39 @@
+{
+    "name": "Mythical Creature Form See",
+    "hidden": true,
+    "type": "origins:multiple",
+    "effect": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "inverted": true,
+                    "type": "origins:power_active",
+                    "power": "lotm:global/mc/mc"
+                },
+                {
+                    "type": "origins:raycast",
+                    "distance": 100,
+                    "block": false,
+                    "entity": true,
+                    "shape_type": "outline",
+                    "fluid_handling": "any",
+                    "hit_bientity_condition": {
+                        "type": "origins:target_condition",
+                        "condition": {
+                            "type": "origins:power_active",
+                            "power": "lotm:global/mc/god"
+                        }
+                    }
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 10,
+        "entity_action": {
+            "type": "origins:grant_power",
+            "power": "lotm:global/view-god/debuff",
+            "source": "lotm"
+        }
+    }
+}

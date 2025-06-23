@@ -1,0 +1,76 @@
+{
+    "name": "Bounce",
+    "description": "Boumce: Consumes 8 Spirituality to enchant yourself with a bounce spell. Stopping all projectile damage, as they just bounce off you. for 7 minutes",
+    "hidden": true,
+    "type": "origins:multiple",
+    "bounce-give": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "lotm:pathways/lord_of_mysteries/door/modes/mode",
+                    "comparison": "==",
+                    "compare_to": 3
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "lotm:pathways/lord_of_mysteries/door/0_door/spirituality/spirituality",
+                    "comparison": ">=",
+                    "compare_to": 20
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:apply_effect",
+                    "effect": {
+                        "effect": "minecraft:luck",
+                        "duration": 8400,
+                        "amplifier": 0,
+                        "is_ambient": true,
+                        "show_particles": false,
+                        "show_icon": false
+                    }
+                },
+                {
+                    "type": "origins:modify_resource",
+                    "resource": "lotm:pathways/lord_of_mysteries/door/0_door/spirituality/spirituality",
+                    "modifier": {
+                        "operation": "addition",
+                        "value": -8
+                    }
+                }
+            ]
+        },
+        "cooldown": 200,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+            "bar_index": 3
+        },
+        "key": {
+            "key": "key.origins.ternary_active"
+        }
+    },
+    "bounce": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:status_effect",
+                    "effect": "minecraft:luck",
+                    "min_amplifier": 0,
+                    "max_amplifier": 0
+                }
+            ]
+        },
+        "type": "origins:invulnerability",
+        "damage_condition": {
+            "type": "origins:projectile"
+        }
+    }
+}

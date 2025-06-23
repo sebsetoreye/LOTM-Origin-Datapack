@@ -1,0 +1,65 @@
+{
+    "name": "God",
+    "description": "As a True God:\nyou are an aspect of the Universe, giving you more health, increased regeneration, reduced hunger, and natural armor.",
+    "type": "origins:multiple",
+    "increased-regen": {
+        "type": "origins:modify_healing",
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 20
+        }
+    },
+    "increased-health": {
+        "type": "origins:attribute",
+        "modifier": {
+            "attribute": "minecraft:generic.max_health",
+            "operation": "addition",
+            "value": 250
+        },
+        "update_health": true
+    },
+    "added-armor": {
+        "type": "origins:attribute",
+        "modifiers": [
+            {
+                "attribute": "minecraft:generic.armor",
+                "operation": "addition",
+                "value": 120
+            },
+            {
+                "attribute": "minecraft:generic.armor_toughness",
+                "operation": "addition",
+                "value": 120
+            }
+        ],
+        "update_health": true
+    },
+    "reduced-hunger": {
+        "type": "origins:modify_exhaustion",
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -8
+        }
+    },
+    "added-strength": {
+        "type": "origins:attribute",
+        "modifiers": [
+            {
+                "attribute": "minecraft:generic.movement_speed",
+                "operation": "multiply_base",
+                "value": 2
+            },
+            {
+                "attribute": "generic.attack_damage",
+                "operation": "multiply_total",
+                "value": 2
+            },
+            {
+                "attribute": "generic.attack_damage",
+                "operation": "addition",
+                "value": 120
+            }
+        ],
+        "update_health": true
+    }
+}
