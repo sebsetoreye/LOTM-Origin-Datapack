@@ -7,7 +7,8 @@
         "lotm:pathways/none/beyonder_human/spirituality/human-spirituality",
         "lotm:pathways/none/beyonder_human/spirituality/human-spirituality-regen",
 
-        "lotm:pathways/none/beyonder_human/upgrade-sequence/lord_of_mysteries/apprentice"
+        "lotm:pathways/none/beyonder_human/upgrade-sequence/lord_of_mysteries/apprentice",
+        "lotm:pathways/none/beyonder_human/upgrade-sequence/lord_of_mysteries/seer"
     ],
     "icon": "minecraft:end_crystal",
     "impact": 3,

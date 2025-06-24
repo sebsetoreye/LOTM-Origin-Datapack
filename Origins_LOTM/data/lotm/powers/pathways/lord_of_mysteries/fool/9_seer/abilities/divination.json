@@ -1,0 +1,84 @@
+{
+    "name": "Divination",
+    "Description": "Consume 5 spirituality to flip a coin that reads fate.",
+    "type": "origins:multiple",
+
+    "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "lotm:pathways/lord_of_mysteries/fool/9_seer/spirituality/spirituality",
+                    "comparison": ">=",
+                    "compare_to": 5
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "lotm:pathways/lord_of_mysteries/fool/modes/mode",
+                    "comparison": "==",
+                    "compare_to": 1
+                }
+            ],
+
+            "entity_action": {
+            "type": "origins:chance",
+            "action": {
+                "type": "origins:apply_effect",
+                "effects":{
+                    "effect":"minecraft:speed",
+                    "duration": 1200,
+                    "show_particles": false,
+                    "show_icon": false    
+                 },
+           
+                    "effect":"minecraft:strength",
+                    "duration": 1200,
+                    "show_particles": false,
+                    "show_icon": false  
+                },
+                    "effect":"minecraft:luck",
+                    "duration": 1200,
+                    "show_particles": false,
+                    "show_icon": true  
+                },
+        "chance": 0.5,
+       
+        "fail action": {
+            "type": "origins:apply_effect",
+            "effects":{
+                "effect":"minecraft:slowness",
+                "duration": 1200,
+                "show_particles": false,
+                "show_icon": false    
+            },    
+           
+                "effect":"minecraft:weakness",
+                "duration": 1200,
+                "show_particles": false,
+                "show_icon": false  
+            },
+                "effect":"minecraft:unluck",
+                "duration": 1200,
+                "show_particles": false,
+                "show_icon": true  
+            },
+            "type:": "origins:modify_resource",
+            "resource":"lotm:pathways/lord_of_mysteries/fool/9_seer/spirituality/spirituality",
+            "modifier":{
+                "operation": "addition",
+                "value": -5
+            },
+            
+            "cooldown": 3600,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+            "bar_index": 5
+        },
+        
+        "key": {
+            "key": "key.origins.secondary_active"
+        }
+
+        }
+
