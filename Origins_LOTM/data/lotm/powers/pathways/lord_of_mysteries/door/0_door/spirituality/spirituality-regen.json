@@ -1,0 +1,14 @@
+{
+    "name": "Door spirituality regen ",
+    "description": "As a Sequence 0: Door, you regenerate Spirituality very fast",
+    "type": "origins:action_over_time",
+    "interval": 20,
+    "entity_action": {
+        "type": "origins:modify_resource",
+        "resource": "lotm:pathways/lord_of_mysteries/door/0_door/spirituality/spirituality",
+        "modifier": {
+            "operation": "addition",
+            "value": 180
+        }
+    }
+}
