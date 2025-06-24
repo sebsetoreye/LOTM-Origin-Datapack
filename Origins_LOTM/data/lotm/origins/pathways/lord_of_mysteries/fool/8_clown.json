@@ -16,7 +16,8 @@
         "lotm:pathways/lord_of_mysteries/fool/8_clown/spirituality/madness/gain-madness",
 
         "lotm:pathways/lord_of_mysteries/fool/8_clown/abilities/divination",
-        "lotm:pathways/lord_of_mysteries/fool/8_clown/abilities/agility"
+        "lotm:pathways/lord_of_mysteries/fool/8_clown/abilities/agility",
+        "lotm:pathways/lord_of_mysteries/fool/8_clown/abilities/roll"
     ],
     "icon": "minecraft:end_crystal",
     "unchoosable": true,

@@ -1,0 +1,12 @@
+{
+    "name":"Clown's Roll",
+    "description":"Clowns know how to fall",
+
+    "type":"origins:modify_falling",
+    "damage_multipler": 0.0,
+        "condition": {
+        "type": "origins:fall_distance",
+        "comparison": ">=",
+        "compare_to": 10
+    }
+}
