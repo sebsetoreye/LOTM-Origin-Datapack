@@ -1,0 +1,16 @@
+{
+    "name": "Clown's Agility",
+    "Description": "As a Clown you are more agile than a normal person.",
+
+    "type": "origins:attribute",
+    "modifier": {
+        "attribute": "minecraft:generic.movement.speed",
+        "operation": "multiply_total",
+        "value": 1.5
+    },
+    
+        "attribute": "minecraft:generic.jump.height",
+        "operation": "multiply_base",
+        "value": 2
+    }
+   

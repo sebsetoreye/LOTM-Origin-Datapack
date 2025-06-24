@@ -1,0 +1,25 @@
+{
+    "name": "8 Clown",
+    "description": "Although being capable of knowing a little about fate, one remains helpless towards fate; therefore, one might as well use a smiling face to hide all the pain, sorrow, confusion, and depression.",
+
+    "powers": [
+
+        "lotm:global/madness/madness",
+        "lotm:global/madness/madness-reduction",
+        "lotm:global/madness/madness-debuff",
+        "lotm:global/view-mcf/see-mcf",
+        "lotm:global/tag-spirit-world",
+        "lotm:global/cognition",
+
+        "lotm:pathways/lord_of_mysteries/fool/8_clown/spirituality/spirituality",
+        "lotm:pathways/lord_of_mysteries/fool/8_clown/spirituality/spirituality-regen",
+        "lotm:pathways/lord_of_mysteries/fool/8_clown/spirituality/madness/gain-madness",
+
+        "lotm:pathways/lord_of_mysteries/fool/8_clown/abilities/divination",
+        "lotm:pathways/lord_of_mysteries/fool/8_clown/abilities/agility"
+    ],
+    "icon": "minecraft:end_crystal",
+    "unchoosable": true,
+    "impact": 3,
+    "order": 10
+}
