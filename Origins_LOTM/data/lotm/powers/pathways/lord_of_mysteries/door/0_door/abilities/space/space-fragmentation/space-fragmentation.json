@@ -13,7 +13,7 @@
         "interval": 1,
         "entity_action": {
             "type": "origins:area_of_effect",
-            "radius": 300,
+            "radius": 1000,
             "bientity_action": {
                 "type": "origins:add_velocity",
                 "x": 0,
