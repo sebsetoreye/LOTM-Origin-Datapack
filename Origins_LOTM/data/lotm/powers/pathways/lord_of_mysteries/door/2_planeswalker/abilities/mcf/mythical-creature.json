@@ -56,5 +56,14 @@
             }
         ],
         "update_health": true
+    },
+    "auto-feed": {
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:feed",
+            "food": 20,
+            "saturation": 20
+        }
     }
 }
