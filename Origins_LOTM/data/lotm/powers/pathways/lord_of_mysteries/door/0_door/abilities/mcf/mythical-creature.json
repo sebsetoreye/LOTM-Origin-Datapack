@@ -52,7 +52,7 @@
             {
                 "attribute": "generic.attack_damage",
                 "operation": "multiply_total",
-                "value": 2
+                "value": 3
             },
             {
                 "attribute": "generic.attack_damage",
